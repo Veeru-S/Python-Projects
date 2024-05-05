@@ -1,0 +1,40 @@
+tasks=[]
+# Coded by VEERU G
+
+# Function
+def addtask():
+    task=input("Enter the Task to be added: ")
+    tasks.append(task)
+    print(f"Task {task} added")
+
+def deletetask():
+    task=input("Enter the Task which u want to delete: ")
+    if task in tasks:
+        tasks.remove(task)
+        print(f"{task} deleted from list.")
+    else:
+        print("This task is not present in your task list.")
+
+def Showalltasks():
+    if len(tasks)==0:
+        print("No tasks are there in the List!")
+    else:
+        n=len(tasks)
+        print(f"No. of tasks = {n}")
+        for task in tasks:
+            print(task)
+
+print("........................\nHi..Welcome to ToDo List\n........................")
+print(" 1.To Add Task \n 2.To Delete Task \n 3.To View all Tasks \n 4.Quit")
+IP=int(input("Enter ur Choice: "))
+
+if IP == 1:
+    addtask()
+elif IP == 2:
+    deletetask()
+elif IP == 3:
+    Showalltasks()
+elif IP == 4:
+    quit()
+else:
+    print("Invalid Input!!Please Try Again")
