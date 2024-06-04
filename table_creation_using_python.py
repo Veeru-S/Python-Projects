@@ -13,13 +13,17 @@ cursor.execute(table)
 print("Table is Ready")
 
 cursor.execute('''INSERT INTO STUDENT VALUES (101,'Veeru', 21)''') 
-cursor.execute('''INSERT INTO STUDENT VALUES (102,'Girish', 30)''') 
+cursor.execute('''INSERT INTO STUDENT VALUES (102,'Girish', 28)''') 
 cursor.execute('''INSERT INTO STUDENT VALUES (103,'Veeresh', 18)''') 
+cursor.execute('''INSERT INTO STUDENT VALUES (104,'Modi', 82)''') 
+cursor.execute('''INSERT INTO STUDENT VALUES (105,'Veerendra', 28)''') 
 
 print("Data Inserted in the table: ") 
 data=cursor.execute('''SELECT * FROM STUDENT''') 
 for row in data: 
     print(row) 
+
+cursor.execute('''SELECT * FROM STUDENT WHERE age=28''') 
 
 cursor.execute('''DELETE FROM STUDENT WHERE age < 20''')
 
