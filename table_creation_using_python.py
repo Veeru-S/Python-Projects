@@ -21,7 +21,7 @@ data=cursor.execute('''SELECT * FROM STUDENT''')
 for row in data: 
     print(row) 
 
-cursor.execute("DELETE FROM STUDENT WHERE age < 20")
+cursor.execute('''DELETE FROM STUDENT WHERE age < 20''')
 
 conn.commit()
 conn.close()
